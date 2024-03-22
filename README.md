@@ -61,6 +61,7 @@
 (https://springdoc.org/)
 
 ### Spring Boot Actuator
+- http://localhost:8080/actuator
 
 ```
 
