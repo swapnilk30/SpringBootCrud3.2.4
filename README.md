@@ -20,7 +20,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-
 - 
 	   <dependency>
 	      <groupId>org.springdoc</groupId>
@@ -28,7 +27,8 @@
 	      <version>2.4.0</version>
 	   </dependency>
 
-- 
+
+- Spring Boot DevTools
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -38,19 +38,29 @@
 		</dependency>
 
 
-# Migrating from SpringFox
+- Lombok
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+
+- Spring Actuator
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+### Migrating from SpringFox
 (https://springdoc.org/migrating-from-springfox.html)
 
-# springdoc-openapi v2.4.0
+### springdoc-openapi v2.4.0
 (https://springdoc.org/)
 
-```
-   <dependency>
-      <groupId>org.springdoc</groupId>
-      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-      <version>2.4.0</version>
-   </dependency>
-```
+### Spring Boot Actuator
 
 ```
 
@@ -69,13 +79,6 @@
 			<scope>runtime</scope>
 		</dependency>
 
-- Lombok
-
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
 
 - H2 Database
 
@@ -85,14 +88,7 @@
 			<scope>runtime</scope>
 		</dependency>
 
-- Spring Actuator
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
-- Spring Boot DevTools
 - Spring Security
 
 ### Entities :
@@ -111,7 +107,6 @@
 
 - http://localhost:9090/h2-console
 
-### Spring Boot Actuator
 
 - http://localhost:9090/actuator
 
