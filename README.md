@@ -20,51 +20,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-- 
-	   <dependency>
-	      <groupId>org.springdoc</groupId>
-	      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-	      <version>2.4.0</version>
-	   </dependency>
-
-
-- Spring Boot DevTools
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-
-
-- Lombok
-
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
-
-
-- Spring Actuator
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
-### Migrating from SpringFox
-(https://springdoc.org/migrating-from-springfox.html)
-
-### springdoc-openapi v2.4.0
-(https://springdoc.org/)
-
-### Spring Boot Actuator
-- http://localhost:8080/actuator
-
-```
-
 - Spring Data JPA 
 
 		<dependency>
@@ -80,6 +35,85 @@
 			<scope>runtime</scope>
 		</dependency>
 
+- Lombok
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+- Spring Boot DevTools
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+
+- Spring Actuator
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+
+- 
+	   <dependency>
+	      <groupId>org.springdoc</groupId>
+	      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+	      <version>2.4.0</version>
+	   </dependency>
+
+
+### Entities :
+
+- Employee
+```java
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "employees")
+public class Employee implements Serializable{
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id; //bigint
+
+	private String name; //varchar(255)
+	
+	private int age; //int
+	
+	private double salary; //double
+	
+	private String department; //varchar(255)
+
+}
+```
+
+### Package Structure :
+```
+com.example
+com.example.entity
+```
+
+
+
+
+```
+
+### Migrating from SpringFox
+(https://springdoc.org/migrating-from-springfox.html)
+
+### springdoc-openapi v2.4.0
+(https://springdoc.org/)
+
+### Spring Boot Actuator
+- http://localhost:8080/actuator
 
 - H2 Database
 
@@ -88,14 +122,6 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
-
-- Spring Security
-
-### Entities :
-
-- Student
-- Employee
 
 
 ### Spring Boot Profiles
