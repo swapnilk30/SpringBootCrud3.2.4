@@ -60,7 +60,7 @@
 		</dependency>
 
 
-- 
+- Swagger
 	   <dependency>
 	      <groupId>org.springdoc</groupId>
 	      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
@@ -68,14 +68,18 @@
 	   </dependency>
 
 
+
+
 ### Entities :
 
 - Employee
+
 ```java
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+
 @Entity
 @Table(name = "employees")
 public class Employee implements Serializable{
@@ -94,17 +98,36 @@ public class Employee implements Serializable{
 
 }
 ```
+- User
 
-### Package Structure :
+```java
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+
+@Entity
+@Table(name = "users")
+public class User {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer userId;
+	
+	@Column(unique = true , length = 100)
+	private String userName;
+	
+	@Enumerated(EnumType.STRING)
+	private Gender gender;
+	
+}
+
 ```
-com.example
-com.example.entity
-```
-
 
 
 
 ```
+
 
 ### Migrating from SpringFox
 (https://springdoc.org/migrating-from-springfox.html)
