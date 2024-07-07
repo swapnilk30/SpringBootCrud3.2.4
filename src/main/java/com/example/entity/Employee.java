@@ -24,9 +24,9 @@ public class Employee implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id; //bigint
+	private long empId; //bigint
 
-	private String name; //varchar(255)
+	private String empName; //varchar(255)
 	
 	private int age; //int
 	
